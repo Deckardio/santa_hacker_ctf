@@ -75,30 +75,30 @@ You can now use a python decompiler on the pyc files within the extracted direct
 После извлечения у нас создастся папка со всеми данными 
 
 ```bash
-drwxr-xr-x  4 dec dec    4096 дек 27 01:25 .
-drwxr-xr-x 14 dec dec    8192 янв  1  1970 ..
--rw-r--r--  1 dec dec  768213 дек 27 01:11 base_library.zip
--rw-r--r--  1 dec dec   66728 дек 27 01:11 libbz2.so.1.0
--rw-r--r--  1 dec dec 2917216 дек 27 01:11 libcrypto.so.1.1
-drwxr-xr-x  2 dec dec    4096 дек 27 01:14 lib-dynload
--rw-r--r--  1 dec dec  202880 дек 27 01:11 libexpat.so.1
--rw-r--r--  1 dec dec  153984 дек 27 01:11 liblzma.so.5
--rw-r--r--  1 dec dec 4683728 дек 27 01:11 libpython3.6m.so.1.0
--rw-r--r--  1 dec dec  294632 дек 27 01:11 libreadline.so.7
--rw-r--r--  1 dec dec  577312 дек 27 01:11 libssl.so.1.1
--rw-r--r--  1 dec dec  170784 дек 27 01:11 libtinfo.so.5
--rw-r--r--  1 dec dec  116960 дек 27 01:11 libz.so.1
--rw-r--r--  1 dec dec    2869 дек 27  2021 main.pyc
--rw-r--r--  1 dec dec    1380 дек 27 01:11 pyiboot01_bootstrap.pyc
--rw-r--r--  1 dec dec    1706 дек 27 01:11 pyimod01_os_path.pyc
--rw-r--r--  1 dec dec    8765 дек 27 01:11 pyimod02_archive.pyc
--rw-r--r--  1 dec dec   17087 дек 27 01:11 pyimod03_importers.pyc
--rw-r--r--  1 dec dec    3638 дек 27 01:11 pyimod04_ctypes.pyc
--rw-r--r--  1 dec dec     676 дек 27 01:11 pyi_rth_inspect.pyc
--rw-r--r--  1 dec dec    1071 дек 27 01:11 pyi_rth_pkgutil.pyc
--rw-r--r--  1 dec dec 1141018 дек 27 01:11 PYZ-00.pyz
-drwxr-xr-x 11 dec dec    8192 дек 27 01:14 PYZ-00.pyz_extracted
--rw-r--r--  1 dec dec     293 дек 27 01:11 struct.pyc
+drwxr-xr-x  4 dec dec    4096 Dec 27 01:25 .
+drwxr-xr-x 14 dec dec    8192 Jan  1  1970 ..
+-rw-r--r--  1 dec dec  768213 Dec 27 01:11 base_library.zip
+-rw-r--r--  1 dec dec   66728 Dec 27 01:11 libbz2.so.1.0
+-rw-r--r--  1 dec dec 2917216 Dec 27 01:11 libcrypto.so.1.1
+drwxr-xr-x  2 dec dec    4096 Dec 27 01:14 lib-dynload
+-rw-r--r--  1 dec dec  202880 Dec 27 01:11 libexpat.so.1
+-rw-r--r--  1 dec dec  153984 Dec 27 01:11 liblzma.so.5
+-rw-r--r--  1 dec dec 4683728 Dec 27 01:11 libpython3.6m.so.1.0
+-rw-r--r--  1 dec dec  294632 Dec 27 01:11 libreadline.so.7
+-rw-r--r--  1 dec dec  577312 Dec 27 01:11 libssl.so.1.1
+-rw-r--r--  1 dec dec  170784 Dec 27 01:11 libtinfo.so.5
+-rw-r--r--  1 dec dec  116960 Dec 27 01:11 libz.so.1
+-rw-r--r--  1 dec dec    2869 Dec 27  2021 main.pyc
+-rw-r--r--  1 dec dec    1380 Dec 27 01:11 pyiboot01_bootstrap.pyc
+-rw-r--r--  1 dec dec    1706 Dec 27 01:11 pyimod01_os_path.pyc
+-rw-r--r--  1 dec dec    8765 Dec 27 01:11 pyimod02_archive.pyc
+-rw-r--r--  1 dec dec   17087 Dec 27 01:11 pyimod03_importers.pyc
+-rw-r--r--  1 dec dec    3638 Dec 27 01:11 pyimod04_ctypes.pyc
+-rw-r--r--  1 dec dec     676 Dec 27 01:11 pyi_rth_inspect.pyc
+-rw-r--r--  1 dec dec    1071 Dec 27 01:11 pyi_rth_pkgutil.pyc
+-rw-r--r--  1 dec dec 1141018 Dec 27 01:11 PYZ-00.pyz
+drwxr-xr-x 11 dec dec    8192 Dec 27 01:14 PYZ-00.pyz_extracted
+-rw-r--r--  1 dec dec     293 Dec 27 01:11 struct.pyc
 ```
 
 Для того, чтобы декомпилить `наш main.pyc`, необходимо отредактировать его заголовок, для этого нам необходим файл `abc.pyc` находящийся в папке `base_library.zip`. Более подробно можно почитать в этом [блоге](https://nedbatchelder.com/blog/200804/the_structure_of_pyc_files.html) Открываем его в любом удобно в hex-редакторе, я использую 010 Editor
