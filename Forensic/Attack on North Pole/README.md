@@ -1,15 +1,15 @@
 # Forensic
 
-![[Pasted image 20211226184209.png]]
+![[task_attack_on_north_pole.png]]
 
 В заднии у нас приложен дамп сетевого трафика, значит первым делом идем запускать [Wireshark](https://www.wireshark.org/)
 
-![[Pasted image 20211226184521.png]]
+![[wireshark_all.png]]
 
 В трафике мы видим, что происходит обмен ключами. Также видно что основной трафик идет от  `192.168.66.1` и до `192.168.66.158`, но в какой то момент мы видим новый ip `192.168.66.159` и GET запрос файла `Log4jRCE`. 
 Скачаем его:
 
-![[Pasted image 20211226185246.png]]
+![[wireshark_export.png]]
  и выведем его содержимое
  
 		 $ strings Log4jRCE.class 

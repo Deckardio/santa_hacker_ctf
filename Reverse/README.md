@@ -1,6 +1,6 @@
 # Reverse
 
-![[Pasted image 20211227000344.png]]
+![[reverse_task.png]]
 
 Первым делом проверим, что за файл нам дан
 
@@ -38,7 +38,7 @@ main: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linke
 
 Просмотрев програму через [Ghidra](https://github.com/NationalSecurityAgency/ghidra) по заголовку файла понимаем что это скомпилированный python файл
 
-![[Pasted image 20211227005227.png]]
+![[reverse_ghidra.png]]
 
 Для того чтобы распаковать elf file используем [PyInstaller Extractor](https://github.com/extremecoders-re/pyinstxtractor)
 
@@ -106,18 +106,18 @@ drwxr-xr-x 11 dec dec    8192 дек 27 01:14 PYZ-00.pyz_extracted
 Видим что есть разница в заголовках между файлами `abc.pyc` и нашим файлом для декомпила `main.pyc`
 
 `abc.pyc:`
-![[Pasted image 20211227013341.png ]]
+![[reverse_hex1.png ]]
 
 `main.pyc`
-![[Pasted image 20211227013752.png]]
+![[reverse_hex2.png]]
 
 Необходимо отредактировать заголовок `main.pyc` из `abc.pyc` все что до символа `@`
 
-![[Pasted image 20211227013935.png]]
+![[reverse_hex3.png]]
 
 и затем вставить в наш `main.pyc` и мы получим следующего вида заголовок
 
-![[Pasted image 20211227014040.png]]
+![[reverse_hex4.png]]
 
 После этого мы можем использовать [uncompyle6](https://github.com/rocky/python-uncompyle6/). В итоге мы получим вывод следующего вида, за которым будет идти сам код
 
