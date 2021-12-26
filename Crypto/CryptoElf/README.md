@@ -1,6 +1,6 @@
 # Crypto
 
-!(/img/Pasted image 20211226173312.png)
+![img](/img/Pasted image 20211226173312.png?raw=true "img")
 
 Нам дан открытый ключ и зашифрованный файл.
 
