@@ -1,5 +1,6 @@
 # Web
-![[web_classic.png]]
+
+![img](/img/web_classic.png?raw=true)
 
 Обычная SQL-инъекция. Для предотвращения автоматизированного запуска был добавлен хеш к запросу, который решался проксированием запроса с sqlmap, либо вручную.
 
@@ -13,4 +14,4 @@
 
 результат:
 
-![[classic_flag.png]]
+![img](/img/classic_flag.png?raw=true)

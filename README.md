@@ -1,5 +1,6 @@
 # Hacker Santa CTF
-![[main.jpg]]
+
+![img](/img/main.jpg?raw=true)
 
 ### Соревнования от сообщества для сообщества
 

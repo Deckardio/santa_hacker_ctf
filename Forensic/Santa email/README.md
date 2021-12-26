@@ -1,28 +1,28 @@
 # Forensic
 
-![[task_santa_email.png]]
+![img](/img/task_santa_email.png?raw=true)
 
 Скачать образ можно [тут](https://disk.yandex.ru/d/HyXA8BMMh4GO0A)
 
 Открываем дамп памяти, в разборе используется программа Autopsy. Так как нам дана подсказка с почтами, то сразу идем к просмотру данных, собранных с почт.
 
-![[santa_email.png]]
-![[santa_all_email.png]]
+![img](/img/anta_email.png?raw=true)
+![img](/img/santa_all_email.png?raw=true)
 
 
 Далее открываем список почт и начинаем искать исходя из того, что почта должна быть новогодний и по ней должно быть собрано большое количество файлов. Можно методом проб, но можно выбрать начать сразу с максимального количества файлов. У нас будет две почты с большим количеством данных.
 
-![[santa_email_ctf.png]]
+![img](/img/santa_email_ctf.png?raw=true)
 
 Открываем почту и начинаем перебирать файлы, внимательно просматривая. В очередном файле почты мы видим скачанный документ `Santa_doc`, дальше два варианта: найти флаг прямо в том же файле почты или просто сделать поиск файла `Santa_doc` по дампу и обнаружить флаг `IMKT{New_Yearrr2022}`.
 
 ##### Вариант1
 
-![[santa_email_info.png]]
+![img](/img/santa_email_info.png?raw=true)
 Необходимый файл со скачанным документом и флагом
 
 ##### 2 вариант с поиском файла
 
-![[santa_end1.png]]
-![[santa_end2.png]]
-![[santa_end3.png]]
+![img](/img/santa_end1.png?raw=true)
+![img](/img/santa_end2.png?raw=true)
+![img](/img/santa_end3.png?raw=true)

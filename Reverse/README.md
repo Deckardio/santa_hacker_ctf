@@ -1,6 +1,6 @@
 # Reverse
 
-![[reverse_task.png]]
+![img](/img/reverse_task.png?raw=true)
 
 Первым делом проверим, что за файл нам дан
 
@@ -36,7 +36,7 @@ main: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linke
 К сожалению я не могу найти password в своей базе. Приходи когда у тебя будет пароль  
 ```
 
-Просмотрев програму через [Ghidra](https://github.com/NationalSecurityAgency/ghidra) по заголовку файла понимаем что это скомпилированный python файл
+Просмотрев программу через [Ghidra](https://github.com/NationalSecurityAgency/ghidra) по заголовку файла понимаем что это скомпилированный python файл
 
 ![[reverse_ghidra.png]]
 
@@ -72,7 +72,7 @@ main: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linke
 You can now use a python decompiler on the pyc files within the extracted directory
 ```
 
-После извлечения у нас создасться папка со всеми данными 
+После извлечения у нас создастся папка со всеми данными 
 
 ```bash
 drwxr-xr-x  4 dec dec    4096 дек 27 01:25 .
@@ -101,7 +101,7 @@ drwxr-xr-x 11 dec dec    8192 дек 27 01:14 PYZ-00.pyz_extracted
 -rw-r--r--  1 dec dec     293 дек 27 01:11 struct.pyc
 ```
 
-Для того, чтобы декомпилить `наш main.pyc`, необходимо отредактировать его заголовок, для этого нам необходим файл `abc.pyc` находящийся в папке `base_library.zip`. Более подробно можно почитать в этом [блоге](https://nedbatchelder.com/blog/200804/the_structure_of_pyc_files.html) Открываем его в любом удобнов hex-редакторе, я использую 010 Editor
+Для того, чтобы декомпилить `наш main.pyc`, необходимо отредактировать его заголовок, для этого нам необходим файл `abc.pyc` находящийся в папке `base_library.zip`. Более подробно можно почитать в этом [блоге](https://nedbatchelder.com/blog/200804/the_structure_of_pyc_files.html) Открываем его в любом удобно в hex-редакторе, я использую 010 Editor
 
 Видим что есть разница в заголовках между файлами `abc.pyc` и нашим файлом для декомпила `main.pyc`
 
@@ -203,12 +203,12 @@ ansver(hash)
 
 ```
 
-Тут мы видим функцию `ansver()` в которой и происходит формирование флага. Судя по ее соедржимому, она переводит из `int` в `ascii` и создает все возможные варианты из словаая  `itertools.permutations(text)` 
+Тут мы видим функцию `ansver()` в которой и происходит формирование флага. Судя по ее содержимому, она переводит из `int` в `ascii` и создает все возможные варианты из словаря  `itertools.permutations(text)` 
 Тут мы видим функцию `ansver()` в которой и происходит формирование флага. Функция `itertools.permutations(text)`  создает из заданного списка все варианты его перестановок, затем происходит декодирование из `int` в `ascii` и `pass` всех вариантов, которые не могут быть декодированы в строку, путем поиска символа `x` в полученных декодированных вариантов перестановок, после выводит флаг.
 
 ### Альтернативный способ решения
 
-После приминения  [PyInstaller Extractor](https://github.com/extremecoders-re/pyinstxtractor) мы можем уже считать значение strings из нашего `main.pyc` файла
+После применения  [PyInstaller Extractor](https://github.com/extremecoders-re/pyinstxtractor) мы можем уже считать значение strings из нашего `main.pyc` файла
 
 ```bash
 ┌──(dec㉿kali)-[/media/dec/ESD-USB/main.dump_extracted]

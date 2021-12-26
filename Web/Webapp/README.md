@@ -1,6 +1,6 @@
 # Web
 
-![[webapp_task.png]]
+![img](/img/webapp_task.png?raw=true)
 
 Случай взят при создании NULLED версии одного из популярных продуктов на PHP
 
@@ -18,35 +18,35 @@
 
 Видим такую штуку
 
-![[webapp1.png]]
+![img](/img/webapp1.png?raw=true)
 
 Поиск по коду не даёт ничего. Не существует никакого checkLicense, а он есть.
 
-![[webapp2.png]]
+![img](/img/webapp2.png?raw=true)
 
 Перемещаясь на уровень выше, мы видим, что приложение подтягивает файл из /vendor/autoload_runtime.php
 
 Переходим в него и видим, что он с самого начала тянет еще файл: autoload.php
 
-![[webapp3.png]]
+![img](/img/hwebapp3.png?raw=true)
 
 Перейдя в autoload.php, видим, что он тянет еще один файл autoload_real.php
 
-![[webapp4.png]]
+![img](/img/webapp4.png?raw=true)
 
 Открывая данный файл, мы видим, что здесь всё находится в одну строку, что наводит на подозрения.
 
 Прогоняем код через beautifier и начинаем его читать
 
-![[webapp5.png]]
+![img](/img/webapp5.png?raw=true)
 
 Видим что-то закодированное
 
-![[webapp6.png]]
+![img](/img/webapp6.png?raw=true)
 
 Раскодируем и увидим, что он зачем-то содержит путь до файла lang.lock
 
-![[webapp7.png]]
+![img](/img/webapp7.png?raw=true)
 
 Не вдаваясь в глубокие подробности, PHP позволяет регистрировать класс через stream_register_wrapper
 
@@ -54,10 +54,10 @@
 
 Смотрим обратно в код - видим
 
-![[webapp8.png]]
+![img](/img/webapp8.png?raw=true)
 
 Вставим в данную цепочку функций код с файла и получим флаг
 
-![[webapp9.png]]
+![img](/img/webapp9.png?raw=true)
 
 P.S Другой способ был - посмотреть время и дату модификации файлов в архиве

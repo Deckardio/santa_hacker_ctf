@@ -1,6 +1,6 @@
 # Web
 
-![[task_hidden.png]]
+![img](/img/task_hidden.png?raw=true)
 
 Случай взят с реального производственного объекта
 
@@ -8,7 +8,7 @@
 
 Можно было dirbuster-ом найти ссылку /api/
 
-![[hidden_api.png]]
+![img](/img/hidden_api.png?raw=true)
 
 Далее - внимательно изучить эту страницу, потыкав на кнопки различные
 
@@ -22,4 +22,4 @@
 
 Результат:
 
-![[hidden_flag.png]]
+![img](/img/hidden_flag.png?raw=true)

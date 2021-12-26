@@ -1,6 +1,6 @@
 # Forensic
 
-![[task_potter.png]]
+![img](/img/task_potter.png?raw=true)
 
 Распаковываем архив, где видим что есть файл с расширением `raw`. Вероятно, это дамп памяти.
 
@@ -8,24 +8,24 @@
 
 В описании к заданию написано `вместо письма из Хогвартса волшебник получил кое-что другое`, так как никаких почтовых сов рядом нет, можно предположить что `что-то другое` было получено на электронный адрес. Смотрим их в панели слева:
 
-![[potter_board.png]]
+![img](/img/potter_board.png?raw=true)
 
 Просмотрев список, видим почтовый адрес нашего главного героя `potter_h@internet.ru`
 
-![[potter_email.png]]
+![img](/img/potter_email.png?raw=true)
 
 И смотрим содержимое
 
-![[potter_info_email.png]]
+![img](/img/potter_info_email.png?raw=true)
 
 Больше ничего и нет, пробуем перейти и нас выкидывает на `Carved files`, список небольшой да и из общей картины явно выбивается один архив:
 
-![[potter_files.png]]
+![img](/img/potter_files.png?raw=true)
 
 Также видим его содержимое, текстовый документ. Выкачиваем архив для дальнейшего исследования:
 
-![[potter_extract.png]]
+![img](/img/potter_extract.png?raw=true)
 
 Открываем наш архив а у него и комментарий есть:
 
-![[potter_zip.png]]
+![img](/img/potter_zip.png?raw=true)
