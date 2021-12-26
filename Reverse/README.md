@@ -38,7 +38,7 @@ main: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linke
 
 Просмотрев программу через [Ghidra](https://github.com/NationalSecurityAgency/ghidra) по заголовку файла понимаем что это скомпилированный python файл
 
-![[reverse_ghidra.png]]
+![img](/img/reverse_ghidra.png?raw=true)
 
 Для того чтобы распаковать elf file используем [PyInstaller Extractor](https://github.com/extremecoders-re/pyinstxtractor)
 
