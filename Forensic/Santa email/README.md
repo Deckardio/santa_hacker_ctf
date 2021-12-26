@@ -6,7 +6,7 @@
 
 Открываем дамп памяти, в разборе используется программа Autopsy. Так как нам дана подсказка с почтами, то сразу идем к просмотру данных, собранных с почт.
 
-![img](/img/anta_email.png?raw=true)
+![img](/img/santa_email.png?raw=true)
 ![img](/img/santa_all_email.png?raw=true)
 
 
