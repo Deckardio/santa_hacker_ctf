@@ -1,6 +1,6 @@
 # Crypto
 
-![[elf.png]]
+![img](/img/elf.png?raw=true)
 
 Нам дан открытый ключ и зашифрованный файл.
 
