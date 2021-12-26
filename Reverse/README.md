@@ -106,18 +106,18 @@ drwxr-xr-x 11 dec dec    8192 дек 27 01:14 PYZ-00.pyz_extracted
 Видим что есть разница в заголовках между файлами `abc.pyc` и нашим файлом для декомпила `main.pyc`
 
 `abc.pyc:`
-![[reverse_hex1.png ]]
+![img](/img/reverse_hex1.png?raw=true)
 
 `main.pyc`
-![[reverse_hex2.png]]
+![img](/img/reverse_hex2.png?raw=true)
 
 Необходимо отредактировать заголовок `main.pyc` из `abc.pyc` все что до символа `@`
 
-![[reverse_hex3.png]]
+![img](/img/reverse_hex3.png?raw=true)
 
 и затем вставить в наш `main.pyc` и мы получим следующего вида заголовок
 
-![[reverse_hex4.png]]
+![img](/img/reverse_hex4.png?raw=true)
 
 После этого мы можем использовать [uncompyle6](https://github.com/rocky/python-uncompyle6/). В итоге мы получим вывод следующего вида, за которым будет идти сам код
 
