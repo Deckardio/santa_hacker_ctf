@@ -28,7 +28,7 @@
 
 Переходим в него и видим, что он с самого начала тянет еще файл: autoload.php
 
-![img](/img/hwebapp3.png?raw=true)
+![img](/img/webapp3.png?raw=true)
 
 Перейдя в autoload.php, видим, что он тянет еще один файл autoload_real.php
 
