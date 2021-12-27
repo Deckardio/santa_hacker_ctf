@@ -21,4 +21,4 @@
 Фишка данного подхода в том, что злоумышленник использовал особенности работы CDN Fastly (а точнее кеширующего прокси сервера Varnish, который находится у него под капотом) для эксфильтрации данных через легитимный ресурс и последующего редиректра на вредоносный сервер. Данная техника ранее была выявлена исследователями безопасности при анализе вредоносного Python модуля importantpackage в репозитории PyPI.
 
 Что почитать:
-- Подробнее про технику «Abusing CDN TLS termination» для эксфильтрации данных: https://jfrog.com/blog/python-malware-imitatessigned-pypi-traffic-in-novel-exfiltration-technique/
+- Подробнее про технику «Abusing CDN TLS termination» для эксфильтрации данных: https://jfrog.com/blog/python-malware-imitates-signed-pypi-traffic-in-novel-exfiltration-technique/
